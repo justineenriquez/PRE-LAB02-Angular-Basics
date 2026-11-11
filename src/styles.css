@@ -1,0 +1,129 @@
+.resume {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 32px;
+  color: #12544F;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.7;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-bottom: 1px solid #cccccc;
+  padding-bottom: 22px;
+  margin-bottom: 28px;
+}
+
+.intro h1 {
+  margin-bottom: 4px;
+  color: #2A835F;
+  font-size: 2.2rem;
+}
+
+.intro p {
+  color: #555555;
+  overflow-wrap: anywhere;
+}
+
+.avatar-placeholder {
+  width: 160px;
+  height: 160px;
+  min-width: 160px;
+  min-height: 160px;
+  border-radius: 50%;
+  background-color: #d1d5db;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 15px;
+  border: 4px solid #2A835F;
+}
+
+/* Head circle */
+.avatar-placeholder::before {
+  content: '';
+  position: absolute;
+  top: 22%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: #808893;
+}
+
+/* Body / shoulders arc */
+.avatar-placeholder::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 82px;
+  height: 52px;
+  border-radius: 50% 50% 0 0;
+  background-color: #808893; /* Darker gray color */
+}
+
+/* Styles for when you eventually upload your actual image file */
+.profile-pic {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 4px solid #2A835F;
+  background-color: #e9ecef;
+  display: block;
+}
+
+section {
+  margin: 26px 0;
+}
+
+section h2 {
+  color: #2A835F;
+  border-bottom: 1px solid #aaaaaa;
+  padding-bottom: 6px;
+  text-transform: uppercase;
+  font-size: 1.15rem;
+}
+
+ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px 24px;
+  padding-left: 22px;
+}
+
+button {
+  border: 0;
+  border-radius: 6px;
+  padding: 10px 18px;
+  background: #2A835F;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  position: mi
+}
+
+button:hover {
+  background: #8BBB92;
+}
+
+@media (max-width: 600px) {
+  .resume {
+    margin: 12px;
+    padding: 18px;
+  }
+
+  ul {
+    grid-template-columns: 1fr;
+  }
+
+  .intro h1 {
+    font-size: 1.7rem;
+  }
+}
